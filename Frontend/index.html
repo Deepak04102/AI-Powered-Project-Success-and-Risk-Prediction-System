@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Project Success & Risk Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Project Success & Risk Prediction</h1>
+
+        <p class="subtitle">
+            Predict project success and identify potential risks
+            before the project starts.
+        </p>
+
+        <form id="predictionForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Budget (₹)</label>
+                    <input
+                        type="number"
+                        id="budget"
+                        placeholder="e.g. 800000"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Planned Duration (Months)</label>
+                    <input
+                        type="number"
+                        id="planned_duration"
+                        placeholder="e.g. 10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Team Size</label>
+                    <input
+                        type="number"
+                        id="team_size"
+                        placeholder="e.g. 8"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Team Experience (Years)</label>
+                    <input
+                        type="number"
+                        id="team_experience"
+                        placeholder="e.g. 7"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Requirement Stability (1-10)</label>
+                    <input
+                        type="number"
+                        id="requirement_stability"
+                        min="1"
+                        max="10"
+                        placeholder="1-10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Previous Similar Projects</label>
+                    <input
+                        type="number"
+                        id="previous_similar_projects"
+                        min="0"
+                        placeholder="e.g. 5"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Complexity (1-10)</label>
+                    <input
+                        type="number"
+                        id="complexity"
+                        min="1"
+                        max="10"
+                        placeholder="1-10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Client Involvement (1-10)</label>
+                    <input
+                        type="number"
+                        id="client_involvement"
+                        min="1"
+                        max="10"
+                        placeholder="1-10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Resource Availability (1-10)</label>
+                    <input
+                        type="number"
+                        id="resource_availability"
+                        min="1"
+                        max="10"
+                        placeholder="1-10"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <button type="submit">
+                Predict Project Success
+            </button>
+
+        </form>
+
+        <div id="loading" class="loading">
+            Analyzing project...
+        </div>
+
+        <div id="result" class="result">
+
+            <h2>Prediction Result</h2>
+
+            <p>
+                <strong>Success Probability:</strong>
+                <span id="successProbability"></span>%
+            </p>
+
+            <p>
+                <strong>Prediction:</strong>
+                <span id="prediction"></span>
+            </p>
+
+            <p>
+                <strong>Risk Level:</strong>
+                <span id="riskLevel"></span>
+            </p>
+
+            <h3>Risk Factors</h3>
+            <ul id="riskFactors"></ul>
+
+            <h3>Recommendations</h3>
+            <ul id="recommendations"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
